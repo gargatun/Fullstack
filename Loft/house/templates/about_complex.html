@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoftHouse</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/youtubeLightbox/youtubeLightbox.css' %}">
+</head>
+<body>
+    <header class="header none1">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-row">
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'img/logo.svg' %}" alt="Loft House">
+                    </a>
+                    <div class="header__nav">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                              <li><a href="{% url 'about_complex' %}">О комплексе</a></li>
+                              <li><a href="{% url 'district' %}">Район</a></li>
+                              <li><a href="{% url 'apartment_catalog' %}">Каталог квартир</a></li>
+                              <li><a href="{% url 'mortgage' %}">Ипотека</a></li>
+                              <li><a href="{% url 'contacts' %}">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header__nav-btn">
+                        <button class="nav-icon-btn">
+                            <div class="nav-icon"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="header__title">История и архитектура
+                <a href="#benefits"></a>
+            </h1>
+        </div>
+
+        <div class="header__footer">
+
+        </div>
+    </header>
+
+    <main>
+        <section class="benefits none1">
+            <h2 class="visually-hidden">Преимущества ЖК</h2>
+            <div class="container container--sm">
+                <div class="benefits__row">
+                    <div class="benefits__item">
+                        <img src="{% static 'img/benefits/bench.svg' %}" alt="" class="benefits__item-img">
+                        <p class="benefits__item-text">LoftHouse - это уникальный жилой комплекс, который сочетает в себе историческое наследие и современный подход к архитектуре. Особое внимание уделяется сохранению исторического облика зданий и интеграции их в современный городской пейзаж.</p>
+                    </div>
+                    <div class="benefits__item">
+                        <img src="{% static 'img/benefits/building.svg' %}" alt="" class="benefits__item-img">
+                        <p class="benefits__item-text">Расположенный в сердце города, LoftHouse предлагает удобный доступ ко всем необходимым объектам инфраструктуры: магазинам, кафе, паркам и скверам. Комплекс оснащён современными системами безопасности и предлагает широкий спектр услуг.</p>
+                    </div>
+                    <div class="benefits__item">
+                        <img src="{% static 'img/benefits/fountain.svg' %}" alt="" class="benefits__item-img">
+                        <p class="benefits__item-text">Проектирование комплекса выполнено с учётом современных экологических стандартов. В комплексе много зелёных насаждений, что создаёт ощущение простора и связи с природой, не выходя из городской среды.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <footer class="footer none1">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__logo">
+                    <a href="#!">
+                        <img src="{% static 'img/logo.svg' %}" alt="Loft House">
+                    </a>
+                </div>
+				<div class="footer__nav">
+					<nav>
+						<ul class="footer__nav-list">
+							<li><a href="#!">О комплексе</a></li>
+							<li><a href="#!">Район</a></li>
+							<li><a href="#!">Каталог квартир</a></li>
+							<li><a href="#!">Ипотека</a></li>
+							<li><a href="#!">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__nav">
+					<nav>
+						<ul class="footer__nav-list">
+							<li><a href="#!">Поселение и переезд</a></li>
+							<li><a href="#!">Сервисные услуги</a></li>
+							<li><a href="#!">Экологическая устойчивость</a></li>
+							<li><a href="#!">Инвестиционные возможности</a></li>
+							<li><a href="#!">Программа лояльности </a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__address">
+					<ul class="footer__nav-list">
+						<li>Адрес: Наб. реки Фонтанки 10-15</li>
+						<li>Телефон: <a href="tel:+78121234567">8 (812) 123-45-67</a></li>
+						<li>Отдел продаж: 10:00 - 20:00</li>
+						<li>E-mail: <a class="link-bold" href="mailto:vip@lofthouse.ru">vip@lofthouse.ru</a></li>
+					</ul>
+					<ul class="footer__socials">
+						<li><a href="#!"><img src="{% static 'img/socials/youtube.svg' %}" alt=""></a></li>
+						<li><a href="#!"><img src="{% static 'img/socials/vk.svg' %}" alt=""></a></li>
+						<li><a href="#!"><img src="{% static 'img/socials/facebook.svg' %}" alt=""></a></li>
+						<li><a href="#!"><img src="{% static 'img/socials/instagram.svg' %}" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=9e720c9c-6ead-4e33-a5ff-b26208327683&lang=ru_RU" type="text/javascript"></script>
+
+	<script src="{% static 'libs/phoneMask/mask.js' %}"></script>
+	<script src="{% static 'libs/phoneMask/mask_list.js' %}"></script>
+
+	<script src="{% static 'libs/youtubeLightbox/youtubeLightbox.js' %}"></script>
+
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+</html>
